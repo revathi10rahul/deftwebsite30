@@ -1,0 +1,609 @@
+@media (max-width: 1024px) {
+    .background-container {
+      height: 70vh; /* Reduce height */
+      width: 90vw; /* Adjust width */
+    }
+  
+    .overlay-image {
+      width: 80%; /* Adjust container width */
+      max-width: 500px;
+    }
+  
+    .overlay-image h1 {
+      font-size: 1.8rem; /* Smaller heading */
+    }
+  
+    .overlay-image p {
+      font-size: 0.9rem; /* Smaller text */
+    }
+  }
+  
+  /* Large Mobile Devices */
+  @media (max-width: 768px) {
+    .second-div3-homepage-img {
+      height: 24vh;
+      /* margin-bottom: 13px; */
+      margin-top: -294px;
+      background-size: contain;
+      background-position: 43%;
+  }
+  .deft-twelve{
+    width: 79px;
+    padding: 2px;
+    font-size: 10px;
+  }
+  .second-div4-homepage-img {
+    height: 24vh;
+    /* margin-bottom: 13px; */
+    margin-top: -294px;
+    background-size: contain;
+    background-position: 43%;
+}
+    .background-container {
+      height: auto; /* Allow dynamic height */
+      width: 100%;
+    }
+    .para-homepage{
+        font-size: 12px;
+    }
+  
+    .left-side h2 {
+      top: 5%; /* Adjust positioning */
+      left: 5%; /* Adjust positioning */
+    }
+  
+    .overlay-image {
+      width: 90%;
+      padding: 15px; /* Reduce padding */
+    }
+  
+    .overlay-image h1 {
+      font-size: 1.5rem; /* Smaller font size */
+    }
+  
+    .overlay-image p {
+      font-size: 0.85rem;
+    }
+  
+    .click-here {
+      font-size: 0.9rem; /* Smaller text */
+      padding: 8px 15px; /* Adjust padding */
+    }
+  }
+  
+
+
+
+
+  
+@media (max-width: 768px) {
+    .overlay-image h1 {
+        font-size: 2rem; /* Smaller heading on smaller screens */
+    }
+    
+    .overlay-image p {
+        font-size: 0.9rem; /* Adjust paragraph font size for smaller screens */
+    }
+ }
+ 
+ @media (max-width: 576px) {
+    .background-container {
+        height: auto; /* Allow height to adjust based on content on very small screens */
+        width: 100vw; /* Full width on small screens */
+    }
+ 
+    .left-side {
+        left: 10%; /* Adjust position for smaller screens */
+        top: -10%; 
+    }
+ 
+    .overlay-image {
+        width: 95%; /* Make it even wider on small screens */
+        margin-top: 15%; /* Adjust margin for better positioning */
+    }
+ 
+    .click-here {
+        width: auto; /* Allow width to adapt to content */
+        padding: 10px; /* Add padding for touch targets on mobile devices */
+    }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media(max-width:768px){
+  /* .second-div-homepage-img{
+    height: 60vh;
+    margin-top: 350px;
+    
+  } */
+  .second-div2-homepage-img {
+    height: 24vh;
+    /* margin-bottom: 13px; */
+    margin-top: -294px;
+    background-size: contain;
+    background-position: 43%;
+}
+ }
+@media (max-width: 768px) {
+ 
+  .heading-caro1{
+    font-size: 1.2rem;
+  }
+}
+/* For mobile devices */
+@media (max-width: 768px) {
+  .first-img-homepage {
+    height: 70vh;  /* Set height to 70% of the viewport */
+    background-position: center center;  /* Ensure the center part of the image is visible */
+    background-size: contain;  /* Ensure the image is fully contained */
+  }
+
+  .homepage-img-seconddiv {
+    margin-top: 120px;
+  
+    height: 70vh;  /* Ensure second image fits properly */
+    object-fit: contain;  /* Ensure the image fits within the container without being cropped */
+    object-position: center center;  /* Center the image */
+  }
+  .homepage-img-seconddiv2 {
+    height: 110vh;  /* Ensure second image fits properly */
+    object-fit: contain;  /* Ensure the image fits within the container without being cropped */
+    object-position: center center;  /* Center the image */
+  }
+  .carousel-item {
+    height: auto;  /* Adjust the height based on content */
+  }
+}
+
+/* For tablets or larger mobile devices */
+@media (max-width: 1024px) {
+  .first-img-homepage {
+    height: 70vh;  /* Set height to 70% of the viewport */
+    background-position: center center;  /* Ensure the image remains centered */
+    background-size: contain;  /* Ensure the image is fully visible */
+  }
+
+  .homepage-img-seconddiv {
+    height: 70vh;  /* Adjust height for tablets */
+    object-fit: contain;  /* Ensure the second image fits fully */
+    object-position: center center;  /* Ensure proper alignment */
+  }
+}
+
+/* For larger screens and desktops */
+@media (min-width: 1025px) {
+  .first-img-homepage {
+    height: 70vh;  /* Set height to 70% of the viewport */
+    background-position: center center;  /* Ensure the image stays centered */
+    background-size: contain;  /* Ensure image fits fully within container */
+  }
+
+  .homepage-img-seconddiv {
+    height: 70vh;  /* Set height to 70% of the viewport */
+    object-fit: cover;  /* Ensure the second image fits fully */
+    object-position: center center;  /* Center the image */
+  }
+ 
+  .carousel-caption {
+    text-align: left;
+    margin-bottom: 20vh; /* Adjust margin for smaller screens */
+    margin-left: 100px; /* Reset margin on the left */
+  }
+}
+
+/* For small devices (mobile) */
+@media (max-width: 768px) {
+  .carousel-caption {
+    text-align: center;  /* Center-align text on mobile */
+    margin-bottom: 20vh;  /* Adjust margin-bottom for smaller screens */
+    margin-left: 0;  /* Reset margin-left on mobile */
+    padding-left: 20px;  /* Add padding to left for better alignment */
+  }
+
+  .heading-caro1 {
+    font-size: 1rem;
+    line-height: 1.3;
+    margin-left: 44px;
+    font-weight: bold;
+}
+
+  .carousel-caption-content{
+    font-size:14px; 
+    
+    margin-left: 46px; /* Adjust paragraph font size for mobile */
+  }
+  
+  .carousel-caption-content-third{
+    font-size:14px; 
+    margin-left: 46px; /* Adjust paragraph font size for mobile */
+  }
+}
+
+/* For medium-sized devices (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .carousel-caption {
+    text-align: left;  /* Keep left-aligned text on tablets */
+    margin-bottom: 25vh;  /* Adjust margin-bottom for tablets */
+    margin-left: 0;  /* Reset margin-left on tablets */
+    padding-left: 30px;  /* Add padding to left */
+  }
+
+  .heading-caro1 {
+    font-size: 2rem;  /* Slightly bigger font size on tablets */
+    line-height: 1.4;  /* Adjust line height for readability */
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;  /* Adjust paragraph font size for tablets */
+  }
+}
+
+/* For larger devices (desktop and above) */
+
+@media (max-width: 768px) {
+  .deft-homepage-sub-div-content {
+    font-size: 1rem; /* Smaller font size */
+    margin: 15px;    /* Reduced margin */
+  }
+  .seven h1 {
+    margin-top: -77px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: #222;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: -24px 0;
+    grid-gap: 20px;
+    align-items: center;
+    color: white;
+}
+.deft-it-consulting-div-content {
+  color: white;
+  font-size: 10px;
+  margin-top: -87px;
+  text-align: justify;
+  /* margin: 20px; */
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  .card-deft {
+    height: auto; /* Ensure the height is flexible for large tablets */
+    grid-template-rows: auto 50%; /* Adjust grid for smaller screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .card-deft {
+    height: auto;
+    grid-template-rows: auto 60%; /* Further adjust grid for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .card-deft {
+    width: 100%; /* Ensure full-width on smaller screens */
+    height: auto;
+    grid-template-rows: auto 65%; /* Adjust for smaller mobile screens */
+    box-shadow: 0 10px 15px 3px rgba(2, 2, 2, 0.4); /* Lighter shadow for smaller screens */
+  }
+  .twelve .it-consulting-heading {
+    font-size:30px; font-weight:700;  letter-spacing:1px; text-transform:uppercase; width:160px; text-align:center; margin:auto; white-space:nowrap; padding-bottom:13px;
+  }
+  .twelve{
+    margin-left: -80px;
+  }
+  .twelve .it-consulting-heading:after {
+    background-color: #c50000;
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 95px;
+    left: 100px;
+    margin-bottom: 0.25em;
+}
+
+}
+@media (max-width: 768px) {
+  .grid-it-consulting-landing-div {
+    display: block;
+    margin:10px 10px;
+    /* grid-template-columns: .2fr 1fr; */
+    grid-template-rows: auto minmax(100px, min-content) minmax(70px, 120px) auto; /* Adjust rows for small screens */
+  }
+  .custom-root {
+  
+    --space: 88em;
+    --dark: #EE5E30;
+    --medium: #F18130;
+    --light: #F49931;
+    --txt-color: #1F2329;
+}
+  
+}
+
+@media (max-width: 576px) {
+  .card-deft {
+    width: 100%;
+    height: auto;
+    grid-template-rows: auto 75%; /* More flexible on smaller devices */
+    box-shadow: 0 5px 10px 2px rgba(2, 2, 2, 0.3); /* Even lighter shadow */
+  }
+  
+}
+
+
+/* ===============micro services====================== */
+
+
+
+@media screen and (max-width: 768px) {
+  .div1 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background: #f0fff4; */
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    height: 218vh;
+}
+  .pricing-container {
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column; /* Stack the cards vertically */
+  }
+
+  .pricing-card, .pricing-card-2 {
+    width: 100%; /* Full width on small screens */
+    max-width: 320px; /* Ensure they don't get too wide */
+    margin: 10px 0;
+    display: block; /* Force the cards to display as block */
+  }
+.featured{
+  margin-top: 50px;
+}
+  h3 {
+    font-size: 20px;
+  }
+
+  .price, .price2 {
+    font-size: 28px;
+  }
+
+  .btn, .btn2 {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Extra Small Devices (Mobile Phones) */
+@media screen and (max-width: 480px) {
+  h3 {
+    font-size: 18px; /* Smaller heading font */
+  }
+
+  .price, .price2 {
+    font-size: 24px; /* Smaller price font */
+  }
+
+  .btn, .btn2 {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .pricing-container {
+    gap: 10px;
+  }
+  .mob-view{
+    height:70vh;
+  }
+ 
+}
+
+
+@media (max-width: 768px) {
+  .deft-aisolution-maindiv {
+    flex-direction: column;
+  }
+  .circle-1 {
+    height: 272px;
+    width: 296px;
+    margin: 0px;
+    background: #b25cf8;
+    border-radius: 10% 50%;
+    border: 1px solid black;
+    box-shadow: -10px 10px 6px black;
+}
+.circle-2 {
+  background: #ffc000;
+  height: 69px;
+  width: 300px;
+  margin: -3px;
+  margin-top: 16px;
+  border-radius: 30%;
+  z-index: 10;
+}
+.circle-3 {
+  height: 272px;
+  width: 296px;
+  margin: 0px;
+  margin-top: 10px;
+  background: #b25cf8;
+  border-radius: 50% 10%;
+  border: 1px solid black;
+  box-shadow: -10px 10px 6px black;
+}
+.circle-2 p{
+  text-align: center;
+  border: 5px solid black;
+}
+.circle-3,.circle-1 p{
+  padding: 35px;
+
+}
+.deft-ai-heading {
+  font-size: 27px;
+  text-align: center;
+}
+.deft-modal-body{
+  width: 316px;
+}
+
+}
+
+@media(max-width: 768px) {
+  .container-aboutus {
+      grid-template-columns: 1fr;
+  }
+
+  .deft-contentLeft .deft-row-aboutus {
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .deft-contentLeft .deft-row-aboutus .deft-imgWrapper {
+      height: 200px;
+  }
+
+  .deft-contentRight .deft-content h4 {
+      font-size: 18px;
+  }
+
+  .deft-contentRight .deft-content h2 {
+      font-size: 30px;
+  }
+
+  .deft-contentRight .deft-content p {
+      font-size: 14px;
+  }
+
+  .deft-contentRight .deft-content a {
+      font-size: 14px;
+      padding: 10px 20px;
+  }
+}
+
+@media(max-width: 480px) {
+  .container-aboutus {
+      padding: 20px 10px;
+  }
+
+  .deft-contentLeft .deft-row-aboutus {
+      grid-template-columns: 1fr;
+  }
+
+  .deft-contentLeft .deft-row-aboutus .deft-imgWrapper {
+      height: 150px;
+  }
+
+  .deft-contentRight .deft-content h4 {
+      font-size: 16px;
+  }
+
+  .deft-contentRight .deft-content h2 {
+      font-size: 24px;
+  }
+
+  .deft-contentRight .deft-content p {
+      font-size: 12px;
+  }
+
+  .deft-contentRight .deft-content a {
+      font-size: 12px;
+      padding: 8px 15px;
+  }
+  .deft-contentLeft .deft-row-aboutus {
+    width: 100%;
+    padding: 20px;
+    margin: 9px;
+    margin-right: 4px;
+    grid-gap: 100px;
+}
+}
+
+
+/* =============contact us===================== */
+@media(max-width:768px){
+  .deft-contactus-container {
+    max-width: 358px;
+  }
+.contact-form{
+  width: 25%;
+}
+
+}
