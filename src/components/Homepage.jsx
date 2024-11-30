@@ -1,22 +1,16 @@
-import "./Common.css";
+import "../components/Common.css";
 import { Col, Row, Container } from "react-bootstrap";
-import "./Responsive.css";
-import Mobhomepage from "./Mobhomepage";
-import Aos from 'aos'
-import "aos/dist/aos.css"
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-} from "mdb-react-ui-kit";
-
+import "../components/Responsive.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "react-bootstrap/Carousel";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import React, { useRef ,useEffect} from "react";
+import React, { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 function Homepage() {
   const itSolutionsRef = useRef(null);
@@ -46,9 +40,15 @@ function Homepage() {
   const handleAisolutions = () => {
     navigate("/aisolutions");
   };
+  const handleSupplychain = () => {
+    navigate("/supplychain");
+  };
+  const handleMicroservices=()=>{
+    navigate('/microservices')
+  }
   useEffect(() => {
-    Aos.init({duration:2000})
-   }, [])
+    Aos.init({ duration: 2000 });
+  }, []);
   // const slides = [
   //   {
   //     image: "../../public/Assets/consultant1.png",
@@ -67,15 +67,17 @@ function Homepage() {
   //   },
   // ];
 
-
-  const handleAboutus=()=>{
-    navigate('/aboutus')
-  }
-  const handleContactus=()=>{
-    navigate('/contactus')
-  }
+  const handleAboutus = () => {
+    navigate("/aboutus");
+  };
+  const handleContactus = () => {
+    navigate("/contactus");
+  };
+  const handleFintech = () => {
+    navigate("/fintech");
+  };
   return (
-    <div >
+    <div>
       <Navbar expand="lg" className="bg-body-tertiary" fixed="top">
         <Container>
           <Navbar.Brand href="/">
@@ -90,16 +92,27 @@ function Homepage() {
             />
             Deft Lab
           </Navbar.Brand>
-          <Navbar.Toggle
+          {/* <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             className="custom-navbar-toggle me-1"
-          />
+          /> */}
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            style={{ backgroundColor: "white" }}
+          >
+            <FontAwesomeIcon icon={faBars} />
+          </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="/"     className="navs-hover text-black">Home</Nav.Link>
+              <Nav.Link href="/" className=" text-black">
+                Home
+              </Nav.Link>
 
-              <NavDropdown className="text-black"
-               title={<span style={{ color: 'black' }}>Digital Transformation</span>}
+              <NavDropdown
+                className="text-black"
+                title={
+                  <span style={{ color: "black" }}>Digital Transformation</span>
+                }
                 id="basic-nav-dropdown"
               >
                 <NavDropdown.Item
@@ -109,7 +122,7 @@ function Homepage() {
                   IT Consulting
                 </NavDropdown.Item>
                 <NavDropdown.Item
-                    className="navs-hover text-black"
+                  className="navs-hover text-black"
                   onClick={() => scrollToSectionsecond(aiSolutionsRef)}
                 >
                   Ai Solutions
@@ -118,33 +131,41 @@ function Homepage() {
                   onClick={() =>
                     scrollToSectionthird(microservicesSolutionsRef)
                   }
-                      className="navs-hover text-black"
+                  className="navs-hover text-black"
                 >
                   Micro Services
                 </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown   title={<span style={{ color: 'black' }}>Solutions</span>} id="basic-nav-dropdown">
+              <NavDropdown
+                title={<span style={{ color: "black" }}>Solutions</span>}
+                id="basic-nav-dropdown"
+              >
                 <NavDropdown.Item
                   onClick={() => scrollToSectionfourth(fintechSolutionsRef)}
-                      className="navs-hover text-black"
+                  className="navs-hover text-black"
                 >
                   {" "}
                   Fintech
                 </NavDropdown.Item>
                 <NavDropdown.Item
-                  onClick={() => scrollToSectionfifth(supplychainSolutionsRef)}    className="navs-hover text-black"
+                  onClick={() => scrollToSectionfifth(supplychainSolutionsRef)}
+                  className="navs-hover text-black"
                 >
                   Supply Chain
                 </NavDropdown.Item>
               </NavDropdown>
 
-              <Nav.Link onClick={handleAboutus} className="navs-hover text-black">About Us</Nav.Link>
-              <Nav.Link onClick={handleContactus} className="navs-hover text-black">Contact Us</Nav.Link>
+              <Nav.Link onClick={handleAboutus} className="text-black">
+                About Us
+              </Nav.Link>
+              <Nav.Link onClick={handleContactus} className="text-black">
+                Contact Us
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div data-aos="zoom-out-left">
+      <div data-aos="zoom-in-down">
         {/* <Container fluid>
       <Carousel>
         {slides.map((slide, index) => (
@@ -221,7 +242,7 @@ function Homepage() {
               <Col lg={6} className="first-img-homepage">
                 <img
                   src="../../Assets/consultant1.png"
-                  alt="FIRST IMAGE"
+                  alt="FIRST pic"
                   className="homepage-img-seconddiv"
                 />
               </Col>
@@ -260,7 +281,7 @@ function Homepage() {
               <Col lg={6} className="first-img-homepage">
                 <img
                   src="../../Assets/aiiot.png"
-                  alt="FIRST IMAGE"
+                  alt="ai iot pic"
                   className="homepage-img-seconddiv"
                 />
               </Col>
@@ -280,11 +301,11 @@ function Homepage() {
                   }}
                 >
                   <h3 className="heading-caro1">
-                    Unlock innovative IT solutions and streamline your <br />{" "}
+                    Unlock innovative IT solutions and streamline  <br />{" "}
                     operations with our expert consulting services.
                   </h3>
                   <p className="carousel-caption-content-third">
-                    Partner with us to unlock the full potential of your
+                    Partner with us to unlock the full potential of 
                     technology <br /> and achieve sustainable growth.
                   </p>
                 </Carousel.Caption>
@@ -293,7 +314,7 @@ function Homepage() {
               <Col lg={6} className="first-img-homepage">
                 <img
                   src="../../Assets/homepageimg3.png"
-                  alt="FIRST IMAGE"
+                  alt="homepage 3rd pic"
                   className="homepage-img-seconddiv2"
                 />
               </Col>
@@ -301,20 +322,24 @@ function Homepage() {
           </Carousel.Item>
         </Carousel>
       </div>
-      <div ref={itSolutionsRef} className="deft-it-consulting-div"  >
+      <div
+        ref={itSolutionsRef}
+        className="deft-it-consulting-div"
+        data-aos="zoom-in-down"
+      >
         <Row className="mx-1">
-          <Col lg={6} className="second-div2-homepage-img"  >
+          <Col lg={6} className="second-div2-homepage-img">
             {/* <img
               src="../../Assets/problem solving.png"
               alt="Your description"
               className="homepage-img-seconddiv"
             /> */}
           </Col>
-          <Col lg={6} className="text-center py-5" data-aos="zoom-in-down">
+          <Col lg={6} className="text-center py-5">
             {/* Heading */}
             <div className="number">
               <div class="seven">
-                <h1>IT CONSULTING</h1>
+                <h1 style={{ fontFamily: "poppins-regular" }}>IT CONSULTING</h1>
               </div>
             </div>
             {/* Paragraph */}
@@ -334,19 +359,20 @@ function Homepage() {
           </Col>
         </Row>
       </div>
-      <div  
+      <div
         style={{ height: "70vh", width: "100%", background: "#17193e" }}
-        ref={aiSolutionsRef}  
+        ref={aiSolutionsRef}
       >
         <Row className="mx-1">
           <Col lg={6} className="py-5" data-aos="zoom-in-down">
             <div className="number">
               <div class="seven">
-                <h1>AI SOLUTIONS </h1>
+                <h1 style={{ fontFamily: "poppins-regular" }}>AI SOLUTIONS </h1>
               </div>
             </div>
             {/* Paragraph */}
-            <p className="deft-it-consulting-div-content"
+            <p
+              className="deft-it-consulting-div-content"
               // style={{
               //   color: "white",
               //   fontSize: "1.2rem",
@@ -364,26 +390,33 @@ function Homepage() {
               </button>
             </div>
           </Col>
-          <Col lg={6} className="third-div-homepage-img" data-aos="zoom-in-down">
+          <Col
+            lg={6}
+            className="third-div-homepage-img"
+            data-aos="zoom-in-down"
+          >
             <img
               src="../../Assets/artificial-intelligence.webp"
-              alt="ARTIFICIAL INTELLIGENCE IMAGE"
+              alt="ARTIFICIAL INTELLIGENCE pic"
               className="homepage-img"
             />
           </Col>
         </Row>
       </div>
-      <div  
+      <div
         ref={microservicesSolutionsRef}
         style={{
           height: "70vh",
           width: "100%",
           background: " #c70039",
         }}
-       
       >
         <Row className="mx-1">
-          <Col lg={6} className="second-div3-homepage-img" data-aos="zoom-in-down">
+          <Col
+            lg={6}
+            className="second-div3-homepage-img"
+            data-aos="zoom-in-down"
+          >
             {/* <img
               src="../../Assets/problem solving.png"
               alt="Your description"
@@ -394,11 +427,14 @@ function Homepage() {
             {/* Heading */}
             <div className="number">
               <div class="seven">
-                <h1>MICRO SERVICES</h1>
+                <h1 style={{ fontFamily: "poppins-regular" }}>
+                  MICRO SERVICES
+                </h1>
               </div>
             </div>
             {/* Paragraph */}
-            <p className="deft-it-consulting-div-content"
+            <p
+              className="deft-it-consulting-div-content"
               // style={{
               //   color: "white",
               //   fontSize: "1.2rem",
@@ -412,16 +448,15 @@ function Homepage() {
               your business to evolve and thrive
             </p>
             <div class="button-box d-flex justify-content-center">
-              <button class="deft-twelve">Read More</button>
+              <button class="deft-twelve" onClick={handleMicroservices}>Read More</button>
             </div>
           </Col>
         </Row>
       </div>
 
-      <div  
+      <div
         ref={fintechSolutionsRef}
         style={{ height: "70vh", width: "100%", background: "#0271b1" }}
-       
       >
         <Row className="mx-1">
           <Col lg={6} className="text-center py-5" data-aos="zoom-in-down">
@@ -431,13 +466,13 @@ function Homepage() {
         </h1> */}
             <div className="number">
               <div class="seven">
-                <h1>FINTECH</h1>
+                <h1 style={{ fontFamily: "poppins-regular" }}>FINTECH</h1>
               </div>
             </div>
             {/* Paragraph */}
-            <p 
-            className="deft-it-consulting-div-content"
-            // className="deft-homepage-sub-div-content"
+            <p
+              className="deft-it-consulting-div-content"
+              // className="deft-homepage-sub-div-content"
             >
               Modernize your financial operations with our advanced fintech
               solutions that deliver speed, security, and scalability.By
@@ -446,25 +481,35 @@ function Homepage() {
               operations to meet growing demands.
             </p>
             <div class="button-box d-flex justify-content-center">
-              <button class="deft-twelve">Read More</button>
+              <button class="deft-twelve" onClick={handleFintech}>
+                Read More
+              </button>
             </div>
           </Col>
-          <Col lg={6} className="third-div-homepage-img" data-aos="zoom-in-down">
+          <Col
+            lg={6}
+            className="third-div-homepage-img"
+            data-aos="zoom-in-down"
+          >
             <img
               src="../../Assets/fintech.png"
-              alt="ARTIFICIAL INTELLIGENCE IMAGE"
+              alt="fintech pic"
               className="homepage-img"
             />
           </Col>
         </Row>
       </div>
 
-      <div   
+      <div
         ref={supplychainSolutionsRef}
         style={{ height: "70vh", width: "100%", background: "#660066" }}
       >
         <Row className="mx-1">
-          <Col lg={6} className="second-div4-homepage-img" data-aos="zoom-in-down">
+          <Col
+            lg={6}
+            className="second-div4-homepage-img"
+            data-aos="zoom-in-down"
+          >
             {/* <img
               src="../../Assets/problem solving.png"
               alt="Your description"
@@ -475,13 +520,13 @@ function Homepage() {
             {/* Heading */}
             <div className="number">
               <div class="seven">
-                <h1>SUPPLY CHAIN </h1>
+                <h1 style={{ fontFamily: "poppins-regular" }}>SUPPLY CHAIN </h1>
               </div>
             </div>
             {/* Paragraph */}
-            <p 
-            className="deft-it-consulting-div-content"
-            // className="deft-homepage-sub-div-content"
+            <p
+              className="deft-it-consulting-div-content"
+              // className="deft-homepage-sub-div-content"
             >
               Enhance your supply chain with innovative technologies designed
               for agility and precision. Our solutions provide real-time
@@ -490,7 +535,9 @@ function Homepage() {
               supply chain built for the future.
             </p>
             <div class="button-box d-flex justify-content-center">
-              <button class="deft-twelve">Read More</button>
+              <button class="deft-twelve" onClick={handleSupplychain}>
+                Read More
+              </button>
             </div>
           </Col>
         </Row>

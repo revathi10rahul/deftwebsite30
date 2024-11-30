@@ -18,7 +18,12 @@
    
     font-style: normal;
   }
-
+  @font-face {
+    font-family: 'Poppins-Regular';
+    src: url('../../public/fonts/Poppins-Regular.ttf') format('truetype');
+   
+    font-style: normal;
+  }
   .navs-hover {
     color: #000;
   }
@@ -467,6 +472,7 @@ margin:20px;
 
 
 
+
 /* ==================== ai solution page===================== */
 
 .circle-1,
@@ -491,18 +497,39 @@ margin:20px;
   border-radius:  50%;
 } */
 .circle-1 {
-  background-image: url('../../public/Assets/ai-iot.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 352px;
-    width: 388px; /* Adjust height as needed */
-  border-radius: 50%;
+  height: 500px;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Ensures no image overflows */
 }
 
+.circle-1 img {
+  width: 100%;
+  height: 100%;
+  
+  /* filter: drop-shadow(5px 5px 10px rgb(104, 77, 202)); */
+  object-fit: cover; /* Ensures the image covers the div without distortion */
+}
+
+
 .circle-2 {
+
+  height: 195px;
+  width: 300px;
+  margin-top: 130px;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: -2px 6px 6px 10px rgb(40, 50, 92);
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+/* .circle-2 {
   background: #ffc000;
   height: 195px;
   width: 300px;
@@ -512,8 +539,8 @@ margin:20px;
   align-items: center;
   border-radius: 50% ;
   z-index: 10;
-}
-.circle-3 {
+} */
+/* .circle-3 {
   height: 352px;
     width: 388px;
     padding: 4%;
@@ -523,10 +550,32 @@ margin:20px;
     align-items: center;
   background: #4eb2f8;
   border-radius: 50% ;
-  /* border: 1px solid black;
-  box-shadow: 10px 10px 6px black;  */
-
   
+  
+} */
+/* .circle-3 {
+  background-image: url('../../public/Assets/m2m.webp');
+  background-size: cover;
+  background-position: center;
+  height: 352px;
+    width: 388px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+.circle-3 {
+  height: 500px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures no image overflows */
+}
+
+.circle-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the div without distortion */
 }
 
 .deft-aisolution-maindiv {
@@ -536,14 +585,17 @@ margin:20px;
   /* background: #ffd; */
 }
 
-
+.it-consulting-sub-div-main{
+   padding:20px;
+    margin: 20px 40px;
+}
 
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600');
 .main-deft-ai{
   padding:0;
   margin:0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat';
 }
 .deft-ai-heading{
   font-size:60px;
@@ -906,6 +958,37 @@ margin:20px;
 }
 
 
+.deft-text-shadow-aisolution{
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  margin-top: -20px;
+}
+.deft-sub-text-shadow-aisolution {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-size: 24px;
+  /* background: #000; */
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.7);
+  width: 200px;
+  height: 57px;
+  border-radius: 26px;
+  margin-top: 210px;
+  text-align: center;
+  color: rgb(14, 13, 13);
+  display: flex
+;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
 /* ==============IT CONSULTING  heading============================== */
 .box {
 	position: relative;
@@ -1052,12 +1135,18 @@ margin:20px;
    grid-row: 2;
  }
  
- .figure-1 {
+ /* .figure-1 {
    grid-column: 4 / span 2;
    grid-row: 2 / span 2;
    text-align: right;
    position: relative;
- }
+ } */
+ .figure-1 {
+  grid-column: 5 / span 1;
+  grid-row: 2 / span 1;
+  /* text-align: right; */
+  /* position: relative; */
+}
  
  .figure-1::before {
    content: "";
@@ -2001,9 +2090,26 @@ img{
 
 
 /* ============== contact us===================================== */
+.form-control {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 15px 19px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #475F7B;
+  background-color: #FFF;
+  border: 1px solid #DFE3E7;
+  border-radius: .267rem;
+  -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
 
 
+.floatinglabelmobphonenumber{
+width:400px ;
 
+}
 .deft-contactus {
   min-height: 100vh;
   width: 100%;
@@ -2390,4 +2496,183 @@ ul li {
   background: #218838;
   transform: scale(1.05);
 }
+
+
+
+
+
+
+
+
+/* =============supply chain ==================== */
+
+.about-section{
+	position:relative;
+	padding:20px 0px;
+}
+
+.about-section .content-column{
+	position:relative;
+	margin-bottom:40px;
+}
+
+.about-section .content-column .inner-column{
+	position:relative;
+	padding-top:50px;
+	padding-right:100px;
+}
+
+.about-section .content-column .text{
+	position:relative;
+	color:#777777;
+	font-size:18px;
+	line-height:2em;
+	margin-bottom:40px;
+}
+
+.about-section .content-column .email{
+	position:relative;
+	color:#252525;
+	font-weight:700;
+	margin-bottom:50px;
+}
+
+.about-section .image-column{
+	position:relative;
+	margin-bottom:50px;
+}
+
+.about-section .image-column .inner-column{
+	position:relative;
+	padding:40px 40px 0px 0px;
+	margin-left:50px;
+}
+
+.about-section .image-column .inner-column:after{
+	position:absolute;
+	content:'';
+	right:0px;
+	top:0px;
+	left:40px;
+	bottom:100px;
+	z-index:-1;
+	border:2px solid #d7a449;
+}
+
+.about-section .image-column .inner-column .image{
+	position:relative;
+}
+
+
+.about-section .image-column .inner-column .image img{
+	position:relative;
+	width:100%;
+  height: 60vh;
+	display:block;
+}
+
+.about-section .image-column .inner-column .image .overlay-box{
+	position:absolute;
+	left:40px;
+	bottom:48px;
+}
+
+.about-section .image-column .inner-column .image .overlay-box .year-box{
+	position:relative;
+	color:#252525;
+	font-size:24px;
+	font-weight:700;
+	line-height:1.4em;
+	padding-left:125px;
+}
+
+.about-section .image-column .inner-column .image .overlay-box .year-box .number{
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:110px;
+	height:110px;
+	color:#d7a449;
+	font-size:68px;
+	font-weight:700;
+	line-height:105px;
+	text-align:center;
+	background-color:#ffffff;
+	border:1px solid #000000;
+}
+
+.about-section .btn-style-three:hover {
+    color: #ffffff;
+    background: #d7a449;
+}
+.about-section .btn-style-three {
+    position: relative;
+    line-height: 24px;
+    color: #252525;
+    font-size: 15px;
+    font-weight: 700;
+    background: none;
+    display: inline-block;
+    padding: 11px 40px;
+    background-color: #ffffff;
+    text-transform: capitalize;
+    border: 2px solid #d7a449;
+    font-family: 'Arimo', sans-serif;
+}
+.sec-title2{
+	color:#fff;
+}
+.sec-title {
+    position: relative;
+    padding-bottom: 40px;
+}
+.sec-title .title {
+    position: relative;
+    color: #d7a449;
+    font-size: 18px;
+    font-weight: 700;
+    padding-right: 50px;
+    margin-bottom: 15px;
+    display: inline-block;
+    text-transform: capitalize;
+}
+.sec-title .title:before {
+    position: absolute;
+    content: '';
+    right: 0px;
+    bottom: 7px;
+    width: 40px;
+    height: 1px;
+    background-color: #bbbbbb;
+}
+
+
+
+
+
+
+
+/* ============fintech============ */
+
+
+.section2-deft-demo{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  float: left;
+  justify-content: space-around;
+ height: 50vh;
+}
+
+.text_section2-deft-demo{
+  width: 25em;
+
+}
+
+
+.image_section2-deft-demo img{
+  width: 27em;
+  object-fit: cover;
+}
+
 

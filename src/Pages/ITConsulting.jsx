@@ -1,6 +1,4 @@
 import React,{useState,useEffect} from "react";
-import CircleLinks from "./Circlelinks";
-import MobCirclelink from "./MobCirclelink";
 import Commonnavbar from "../CommonNavbar/Commonnavbar";
 import { Col, Container, Row } from "react-bootstrap";
 import Modal from 'react-bootstrap/Modal';
@@ -11,15 +9,7 @@ function ITConsulting() {
   useEffect(() => {
     Aos.init({duration:2000})
    }, [])
-  const [hoveredSide, setHoveredSide] = useState(null);
 
-  const handleMouseEnter = (side) => {
-    setHoveredSide(side);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredSide(null);
-  };
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -64,7 +54,7 @@ function ITConsulting() {
   
         <div style={{ height: "10vh" }}></div>
  <div class="figure-1" >
-   <img src="../../Assets/supplysolutions.png" alt="Picture of Picasso"/>
+   <img src="../../Assets/supplysolutions.png" alt="Pic of Picasso"/>
  
  </div>
 
@@ -153,18 +143,18 @@ function ITConsulting() {
             <div class="product-imgs" >
               <div class="img-display">
                 <div class="img-showcase">
-                  <img src="../../Assets/multi.jpg" alt="shoe image" />
+                  <img src="../../Assets/multi.jpg" alt="shoe pic" />
                   <img
                     src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_2.jpg"
-                    alt="shoe image"
+                    alt="shoe pic"
                   />
                   <img
                     src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_3.jpg"
-                    alt="shoe image"
+                    alt="shoe pic"
                   />
                   <img
                     src="https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/shoe_4.jpg"
-                    alt="shoe image"
+                    alt="shoe pic"
                   />
                 </div>
               </div>
@@ -570,7 +560,7 @@ function ITConsulting() {
 
   {/* ============ mob vew-code ============================== */}
 </div>
-<Container className="mob-view-deft-itconsulting">
+{/* <Container className="mob-view-deft-itconsulting">
   <Row>
     <Col lg={3}>
     <div class="card-deft">
@@ -629,7 +619,7 @@ function ITConsulting() {
   </div>
     </Col>
   </Row>
-</Container>
+</Container> */}
 
 
 

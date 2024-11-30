@@ -15,6 +15,8 @@ import AISolutions from './Pages/AISolutions';
 import Aboutus from './Pages/Aboutus';
 import Microservices from './Pages/Microservices';
 import Contactus from './Pages/Contactus';
+import Supplychain from './Pages/Supplychain';
+import Fintech from './Pages/Fintech';
 function App() {
   useEffect(() => {
     Aos.init({duration:2000})
@@ -34,6 +36,8 @@ function App() {
      <Route path='/aboutus' element={<Aboutus/>}/>
      <Route path='/microservices' element={<Microservices/>}/>
      <Route path='/contactus' element={<Contactus/>}/>
+     <Route path='/supplychain' element={<Supplychain/>}/>
+     <Route path='/fintech' element={<Fintech/>}/>
 </Routes>
  
 <Footer/>
